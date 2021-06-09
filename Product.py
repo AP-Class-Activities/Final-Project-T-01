@@ -9,10 +9,10 @@ class product:
         self.__score=Score
         
         if Price<0 :
-            raise ValueError(The price must be more than zero)
+            raise ValueError('The price must be more than zero')
         self.__price=Price
         if Number<0 :
-            raise ValueError(The Number must be more than zero)
+            raise ValueError('The Number must be more than zero')
             self.__number=Number
         
     #setters & getters
@@ -22,14 +22,14 @@ class product:
     @price.setter(self)
     def price(self,price):
         if Price<0 :
-            raise ValueError(The price must be more than zero)
+            raise ValueError('The price must be more than zero')
     @property
     def Number(self): 
         return self.__price
     @number.setter(self)
     def Number(self,Number):
         if Number<0 :
-            raise ValueError(The Number must be more than zero)
+            raise ValueError('The Number must be more than zero')
             self.__number=Number
     @property
     def Score(self): 
