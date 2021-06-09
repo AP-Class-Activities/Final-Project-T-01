@@ -28,7 +28,7 @@ class Person:
         self.__sex = sex
         
         if year > 1400 or year < 1395: 
-            raise ValueError('the year for a student should be in rnage 1395 ... 1400')
+            raise ValueError('the year for a year should be in rnage 1395 ... 1400')
         self.__year = year
 
         if valet<1000:
@@ -104,7 +104,7 @@ class Person:
     @year.setter
     def year(self,value): 
         if value > 1400 or value < 1395: 
-            raise ValueError('the year for a student should be in range 1395 ... 1400')
+            raise ValueError('the year for a year should be in range 1395 ... 1400')
         self.__year = value
     
     @property
