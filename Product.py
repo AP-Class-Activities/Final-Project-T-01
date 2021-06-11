@@ -4,39 +4,62 @@ This class is to give meaning to the product
 
 
 class product:
-    def __init__(self,Price,Score=None,Number):
-
+    def __init__(self,id,name,Price,number,Score=None):
+        self.__id = id
+        self.__name = name
         self.__score=Score
         
         if Price<0 :
-            raise ValueError(The price must be more than zero)
+            raise ValueError('The price must be more than zero')
         self.__price=Price
-        if Number<0 :
-            raise ValueError(The Number must be more than zero)
-            self.__number=Number
+        if number<0 :
+            raise ValueError('The Number must be more than zero')
+        self.__number =number
         
     #setters & getters
     @property
+    def id(self): 
+        return self.__id
+
+    @id.setter
+    def id(self,value):
+        self.__id=value
+
+    @property
+    def name(self): 
+        return self.__name
+
+    @name.setter
+    def name(self,value):
+        self.__name=value
+
+    @property
     def price(self): 
         return self.__price
-    @price.setter(self)
-    def price(self,price):
-        if Price<0 :
-            raise ValueError(The price must be more than zero)
+
+    @price.setter
+    def price(self,value):
+        if value<0 :
+            raise ValueError('The price must be more than zero')
+        self.__price=value
+
     @property
-    def Number(self): 
-        return self.__price
-    @number.setter(self)
-    def Number(self,Number):
-        if Number<0 :
-            raise ValueError(The Number must be more than zero)
-            self.__number=Number
+    def number(self): 
+        return self.__number
+    
+    @number.setter
+    def number(self,value):
+        if value<0 :
+            raise ValueError('The Number must be more than zero')
+        self.__number=value
+
     @property
     def Score(self): 
         return self.__score
+
     @Score.setter
-    def Score(selfe,Score):
-        self.__score= Score
+    def Score(self,value):
+        self.__score= value
 
 
 
