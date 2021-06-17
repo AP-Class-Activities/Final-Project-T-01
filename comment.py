@@ -15,5 +15,5 @@ class  Comment:
         return self.__customer
 
     @property
-    def get_text(self):\
+    def get_text(self):
         return self.__text

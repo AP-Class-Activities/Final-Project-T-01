@@ -1,12 +1,14 @@
 class Seller:
     scores = [0]
-    def __init__(self,name,Id,position,store_position,register_date):
-        self.__name=name
+    def __init__(self,Id,name,position,store_position,register_date):
         self.__Id=Id
+        self.__name=name
+        
         self.position = position
         self.store=Store()
         self.store.position = store_position
         self.register_date = register_date
+
     def set_score(self,score):
         self.scores.append(score)
 
