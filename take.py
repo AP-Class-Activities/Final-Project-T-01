@@ -8,25 +8,25 @@ Usage:
    2) Print the course information:    
         print(tk)
 '''
-from Customer import Customer as cu
-from seller import Seller as se
-from good import Good as go
+from Customer import Customer
+from seller import Seller
+from good import Good
 
 class take:
-    def __init__(self,customer, seller, good, time ,share ):
-        self.__customer = customer
-        self.__seller = seller
-        self.__good = good
+    def __init__(self,Customer, Seller, Good, time,share):
+        self.__customer = Customer
+        self.__seller = Seller
+        self.__good = Good
         self.__time = time
         self.__share = share
 
     #setters and getters
     @property
-    def customer(self):
+    def Customer(self):
         return self.__customer
      
-    @customer.setter
-    def ID(self,value): 
+    @Customer.setter
+    def id(self,value):
         self.__customer = value
    #----------------------------------------
      
@@ -40,11 +40,11 @@ class take:
    #----------------------------------------
      
     @property
-    def good(self):
+    def Good(self):
         return self.__good
      
-    @good.setter
-    def ID(self,value): 
+    @Good.setter
+    def id(self,value):
         self.__good = value
 
    #----------------------------------------
@@ -70,4 +70,4 @@ class take:
 
     def __str__(self): 
         return 'CUSTOMER --> {}\t\tSELLER--> {}\t\tGOOD --> {}\t\t time: {}\tshare: {}'\
-            .format(self.customer.ID,self.seller.ID, self.good.ID, self.time, self.share)
+            .format(self.Customer.ID,self.Seller.ID, self.Good.ID, self.time, self.share)
