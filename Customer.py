@@ -1,12 +1,16 @@
 class Customer:
-    def __init__(self,id,name,family,username,password,valet=None):
+    def __init__(self,id,name,family,address,phone,year,username,password,valet=None,score=None):
         self.__id = id
         self.__name = name
         self.__family = family
+        self.__address = address
+        self.__phone = phone
+        self.__year = year
         self.__username = username
         self.__password = password
 
         self.__valet = valet
+        self.__score = score
         #self.__buying_list = Buying_list()
         #self.__favorit_list = Favorit_list()
     
@@ -37,7 +41,33 @@ class Customer:
     def family(self,value): 
         self.__family = value
    #----------------------------------------
-    
+
+    @property
+    def address(self):
+        return self.__address
+     
+    @address.setter
+    def address(self,value): 
+        self.__address = value
+   #----------------------------------------
+
+    @property
+    def phone(self):
+        return self.__phone
+     
+    @phone.setter
+    def phone(self,value): 
+        self.__phone = value
+   #----------------------------------------
+    @property
+    def year(self):
+        return self.__year
+     
+    @year.setter
+    def year(self,value): 
+        self.__year = value
+   #----------------------------------------
+
     @property
     def username(self):
         return self.__username
@@ -64,5 +94,13 @@ class Customer:
     def valet(self,value): 
         self.__valet = value
         
+   #----------------------------------------
+    @property
+    def score(self):
+        return self.__score
+     
+    @score.setter
+    def score(self,value): 
+        self.__score = value
    #----------------------------------------
         
